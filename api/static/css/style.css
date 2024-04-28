@@ -1,0 +1,135 @@
+body {
+    background-image: url(/static/assets/bg.png);
+    background-size: cover;
+}
+
+.sidebar {
+    height: 95%;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #6638B6;
+    padding-top: 20px;
+    margin: 20px;
+    border-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.sidebar a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: #7e5fb3;
+}
+
+.sidebar .yet {
+    font-weight: bold;
+}
+
+.sidebar .head {
+    font-size: 22px;
+    color: white;
+}
+
+.sidebar .colorchange {
+    font-size: 22px;
+    color: #00A9CE;
+    font-weight: bold;
+}
+
+main {
+    margin-left: 250px;
+    padding: 20px;
+
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.col-md-6 {
+    background: rgba(255, 255, 255, 0.33);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 5px;
+    margin: 6px;
+    width: calc(50% - 12px);
+}
+
+.col-md-12 {
+    background: rgba(255, 255, 255, 0.33);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 5px;
+    margin: 6px;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.33);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 5px;
+    margin: 6px;
+}
+
+
+
+.dash1 {
+
+    height: 666px;
+    overflow-y: scroll;
+}
+
+h2 {
+    padding: 6px;
+}
+
+.card-img-top {
+    border: 1px solid lightgrey;
+    border-radius: 25px;
+    width: 43px;
+
+}
+
+
+
+
+.loader {
+    margin: 0 0 2em;
+    height: 100px;
+    width: 20%;
+    text-align: center;
+    padding: 1em;
+    margin: 0 auto 1em;
+    display: inline-block;
+    vertical-align: top;
+}
+
+/*
+    Set the color of the icon
+  */
+svg path,
+svg rect {
+    fill: #FF6700;
+}
+
+.metrics h5{
+    text-align: center;
+}

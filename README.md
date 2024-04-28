@@ -30,3 +30,6 @@ Dieses Repository enthält den Code für mein Bachelorprojekt, das sich auf die 
 ## Nutzung
 
 Jedes Modul kann unabhängig voneinander gestartet werden, je nach den Anforderungen der Tests oder der Analyse. Es ist wichtig, dass die `api` immer läuft, wenn die `test-website` oder der `webtester` verwendet werden, da diese auf die API zur Datenübermittlung angewiesen sind.
+
+## Authors
+- [Julian T. J. Stöcklin](https://github.com/Kehrblech)

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dashboard</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.3.2 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="sidebar">
+        <a href="#" class="yet head"> 🌐AW<span>A</span></a>
+        <a href="#" class="yet">Dashboard</a>
+        <a href="/analytics">Analytics</a>
+        <a href="/heatmap">Heatmap</a>
+        <a href="/confettimap">Confetti</a>
+        <a href="#">Settings</a>
+      </div>
+    </header>
+    <main>
+      <div class="row justify-content-center align-items-center d-flex">
+        <div class="col justify-content-start">
+          <h1>Overview</h1>
+        </div>
+
+        <div class="col justify-content-center">
+          <input
+            type="text"
+            class="form-control"
+            name=""
+            id=""
+            aria-describedby="helpId"
+            placeholder="Search"
+          />
+        </div>
+        <div class="col d-flex justify-content-end">
+          <img
+            class="card-img-top"
+            src="{{ url_for('static', filename='assets/user.png') }}"
+          />
+        </div>
+      </div>
+      <div class="row d-flex justify-content-evenly">
+        <div class="col glass-card">
+          <h5>Geräteverteilung:</h5>
+          <ul>
+            {% for os, count in os_count.items() %}
+            <li>{{ os }}: {{ count }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="col glass-card">
+          <h5>Beliebte Abschnitte:</h5>
+          <ul>
+            {% for section, duration in pop_sections %}
+            <li>{{ section }}: {{ duration|round(2) }} Minuten</li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="col glass-card">
+          <h5>Häufigste Sprache:</h5>
+          <ul>
+            <li>{{language_most_used}}</li>
+          </ul>
+          <h5>Häufigste Resolution:</h5>
+          <ul>
+            <li>{{resulution_most_used}}</li>
+          </ul>
+        </div>
+
+        <div class="col glass-card">
+          <h5>Browser benutzt</h5>
+          <ul>
+            {% for browser,count in browser_most_pop %}
+            <li>{{ browser }} mit {{count}} Stück.</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Heatmap</h2>
+          <div class="dash1">
+            <img
+              src="{{ url_for('static', filename='assets/heatmap_merge.png') }}"
+              alt="Dein Bild"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h2>Analytics</h2>
+          <div
+            class="row justify-content-center align-items-center"
+            style="margin: 2px"
+          >
+            <div class="col-md-6">
+              <h2>Klicks pro h</h2>
+              <img
+                src="data:image/png;base64,{{ chart }}"
+                alt="Chart Clicks"
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-md-6">
+              <h2>Max. Scroll</h2>
+              <img
+                src="data:image/png;base64,{{ chart_scroll_percentage }}"
+                alt="Chart Scroll Histogram"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+          <div
+            class="row justify-content-center align-items-center"
+            style="margin: 2px"
+          >
+            <div class="col-md-6">
+              <h2>Time Spend</h2>
+              <img
+                src="data:image/png;base64,{{ chart_time }}"
+                alt="Chart time spend"
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-md-6">
+              <h2>Max. Scroll</h2>
+              <img
+                src="data:image/png;base64,{{ chart_scroll_percentage }}"
+                alt="Chart Scroll Histogram"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer></footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="/static/js/script.js">
+
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"
+      >
+    </script>
+  </body>
+</html>

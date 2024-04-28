@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    height: 120vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+section:nth-child(even) {
+    background-color: #6638B6;
+}
+
+.nav {
+    background-color: #6638B6;
+}
+
+.nav {
+    text-decoration: none;
+}
+
+.clickable-element {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    color: black;
+}
+
+.clickable-element:hover {
+    background-color: #ddd;
+}
